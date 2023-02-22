@@ -3,8 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 1px solid midnightblue;
+    color: rgb(33, 33, 33);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .border {
@@ -27,17 +28,21 @@
 .navbar button { 
     background-color: palevioletred;
     font-size: 19px;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
 
 }
 
-.navbar p {
+.timer {
     float: right;
-    background-color: palevioletred;
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px 10px 10px 10px;
+   
+}
+.time-alert, .time-left {
+    border: none; 
 }
 
 .inner-container {
@@ -45,5 +50,57 @@
     width: 50%;
     margin: 0 auto;
     background-color: slateblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     
+}
+
+
+.prompt button {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: red;
+    color: white; 
+    cursor: grab;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.quit, .submit {
+    cursor: grab;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: none;
+    margin: 10px;
+   
+}
+
+.prompt button:hover {
+    background: darkblue;
+}
+
+.pop-up {
+    height: 65px;
+    background: white; 
+    border: none;
+    width: 550px; 
+    justify-content: center;
+    border-radius: 5px;
+
+}
+
+.quit:hover,
+.submit:hover {
+    background: darkblue;
+}
+
+
+
+#buttons {
+    display: none;
 }

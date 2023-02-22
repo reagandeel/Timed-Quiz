@@ -1,5 +1,8 @@
 var timeEl = document.querySelector (".time")
 
+
+
+/*
 // Selects element by id
 var mainEl = document.getElementById("main");
 
@@ -52,3 +55,4 @@ function sendMessage() {
 }
 
 setTime();
+*/
