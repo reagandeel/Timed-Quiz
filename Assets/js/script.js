@@ -1,6 +1,11 @@
 var timeEl = document.querySelector (".time")
-
-
+var start = document.getElementById ("start");
+var timeLeft = 75;
+var innerContainer = document.getElementById ("innerContainer");
+var optionA = document.getElementById ("optionA");
+var optionB = document.getElementById ("optionB");
+var optionC = document.getElementById ("optionC");
+var optionD = document.getElementById ("optionD");
 
 /*
 // Selects element by id
