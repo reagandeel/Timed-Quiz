@@ -27,29 +27,23 @@
       </header>
   <!-- Actual Quiz -->
       <main>
-          <section id="question-box">   
-          <div class="question">
-            <span>What does CSS stand for?</span>
-          </div>
-          <div class="answers">
-            <div class="answer">
-              <span>Cascading Style Sheet</span>
-              <div class="correct"><i class="fas fa check"></i></div>
-            </div>
-          </div>
-          <div class="answer-choice">
-            <div class="answer">
-              <span>Computer Style Sheet</span>
-              <div class="wrong"><i class="fas fa tick"></i></div>
-            </div>
-            <div class="answer">
-              <span>Coloring Style Sheet</span>
-              <div class="wrong"><i class="fas fa tick"></i></div>
-            </div>
-            <div class="answer">
-              <span>Common Style Sheet</span>
-              <div class="wrong"><i class="fas fa tick"></i></div>
-            </div>
+          <section id="quizQuestions" style="display:none">
+            <h2 id="mainQuestion"></h2>
+            <ul>
+              <div id="answerChoice">
+                <button id="optionA"></button>
+              </div>
+              <div id="answerChoice">
+                <button id="optionB"></button>
+              </div>
+              <div id="answerChoice">
+                <button id="optionC"></button>
+              </div>
+              <div id="answerChoice">
+                <button id="optionD"></button>
+              </div>
+            </ul>
+          </section>
         </div>
       <!--Footer of the page-->
         <footer id="buttons">
@@ -100,3 +94,28 @@
             <label for="f" id="f_text">Answer.</label>
           </li>
         </ul>-->
+        
+        <!--
+        <div class="question">
+          <span>What does CSS stand for?</span>
+        </div>
+        <div class="answers">
+          <div class="answer">
+            <span>Cascading Style Sheet</span>
+            <div class="correct"><i class="fas fa check"></i></div>
+          </div>
+        </div>
+        <div class="answer-choice">
+          <div class="answer">
+            <span>Computer Style Sheet</span>
+            <div class="wrong"><i class="fas fa tick"></i></div>
+          </div>
+          <div class="answer">
+            <span>Coloring Style Sheet</span>
+            <div class="wrong"><i class="fas fa tick"></i></div>
+          </div>
+          <div class="answer">
+            <span>Common Style Sheet</span>
+          </div>
+        </section> 
+       -->
