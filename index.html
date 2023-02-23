@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web Quiz</title>
   <link rel="stylesheet" href="./Assets/css/style.css">
-  <link rel="javascript" href="./Assets/js/script.js">
+  
 </head>
 <body>
   <div class="border">
@@ -27,25 +27,34 @@
       </header>
   <!-- Actual Quiz -->
       <main>
-        <div class="pop-up">
-          <section>      
-          <div class="question-box">
+          <section id="question-box">   
+          <div class="question">
             <span>What does CSS stand for?</span>
           </div>
           <div class="answers">
             <div class="answer">
               <span>Cascading Style Sheet</span>
-              <div class="right"><i class="fas fa check"></i></div>
+              <div class="correct"><i class="fas fa check"></i></div>
             </div>
           </div>
+          <div class="answer-choice">
             <div class="answer">
               <span>Computer Style Sheet</span>
               <div class="wrong"><i class="fas fa tick"></i></div>
             </div>
-          </div>
+            <div class="answer">
+              <span>Coloring Style Sheet</span>
+              <div class="wrong"><i class="fas fa tick"></i></div>
+            </div>
+            <div class="answer">
+              <span>Common Style Sheet</span>
+              <div class="wrong"><i class="fas fa tick"></i></div>
+            </div>
+        </div>
       <!--Footer of the page-->
         <footer id="buttons">
           <button class="quit">EXIT</button>
+          <button class="next">NEXT QUESTION</button>
           <button class="submit">SUBMIT</button>
         </footer>
       </section>
@@ -54,7 +63,13 @@
       </main>
     </div>
   </div>
+
 </body>
+
+<script src="./Assets/js/script.js"></script>
+</html>
+
+>/*
 
 
 <!--Coded out for good reason:
