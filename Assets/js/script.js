@@ -1,63 +1,94 @@
-var timeEl = document.querySelector (".time")
-var start = document.getElementById ("start");
+// Establishing JS variables
+
+var timeAlert = document.querySelector (".timeAlert");
+var startBtn = document.getElementById ("startBtn");
 var timeLeft = 75;
 var innerContainer = document.getElementById ("innerContainer");
 var optionA = document.getElementById ("optionA");
 var optionB = document.getElementById ("optionB");
 var optionC = document.getElementById ("optionC");
 var optionD = document.getElementById ("optionD");
+var correctChoice = document.getElementById ("correctChoice");
+var quizQuestions = document.getElementById ("quizQuestions");
+var mainQuestion = document.getElementById ("mainQuestion");
+var score = document.querySelector (".score");
+var highScores = [];
+var output = "";
+var score= 0;
+let i=0;
 
-/*
-// Selects element by id
-var mainEl = document.getElementById("main");
+// Setting up the Information for the Timer
+// var timerInterval = setInterval(setTimer,1000);
 
-console.log("Test");
+// 
 
-var secondsLeft = 10;
-// function definition can be seen below - the definition does not have a name.
-// function definition vs declaration
-// declaration will always includde fctn definition, but a definition will refer to guts of function
-// function definition can be an anonymous function ( function w no name - see below )
-// callback functions- passing as an argument to another function because....
-// following function definition does not execute until the interval elapses.
-// the interval = the second; the '1000' is milliseconds in the below amnt 
-function setTime() {
-  // Sets interval in variable
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
-
-    if(secondsLeft === 0) {
-      // Stops execution of action at set interval
-      clearInterval(timerInterval);
-      // Calls function to create and append image
-      sendMessage();
-    }
-
-  }, 1000);
-}
-function CheckTime(){
-    
-document.getElementById("quiz-time-left").innerHTML
-= 'Time Left: ' + c_minutes + ' minutes ' + c_seconds + ' seconds ' ;
-if(total_seconds <=0){
-setTimeout('document.quiz.submit()',1);
-} else {
-total_seconds = total_seconds -1;
-c_minutes = parseInt(total_seconds/60);
-c_seconds = parseInt(total_seconds%60);
-setTimeout("CheckTime()",1000);
-}}
-setTimeout("CheckTime()",1000);
-
-// Function to create and append colorsplosion image
-function sendMessage() {
-  timeEl.textContent = " ";
-  var imgEl = document.createElement("img");
-  imgEl.setAttribute("src", "images/image_1.jpg");
-  mainEl.appendChild(imgEl);
-
+function setTimer (){
+  timeLeft--;
+  console.log (timeLeft);
+  if(timeLeft < 0) {
+    timesUp();
+    timeLeft = 0;
+  }
+  timeAlert.textContent = timeLeft;
 }
 
-setTime();
-*/
+// Quiz Begins!
+
+var questionsArray = [
+  {
+    question: "What is the HTML tag under which you can write the JavaScript code?",
+    option: {
+      a: "A) <javascript>",
+      b: "B) <js>",
+      c: "C) <script>",
+      d: "D) <scripted>",
+    },
+    correctChoice: "c"
+  },
+
+  {
+    question: "What is used to style the HTML page?",
+    option: {
+      a: "A) <style>", 
+      b: "B) Cascading Style Sheet", 
+      c: "C) Color Style Sheet", 
+      d: "D) Design Sheet",
+    },
+    correctChoice: "b"
+  },
+  {
+    question: "Which of the following do you use to establish a variable in JavaScript?",
+    option: {
+      a: "A) var",
+      b: "B) <var>",
+      c: "C) <setvar>",
+      d: "D) variable",
+    },
+    correctChoice: "b"
+  },
+ 
+];
+
+startBtn.addEventListener("click", function() {
+ quizQuestions.style.display = "block";
+ innerContainer.style.display = "none";
+ timeAlert.style.display = "block";
+ timeAlert.textContent = timeLeft;
+ setInterval(setTimer, 1000);
+ setQuizQuestions();
+
+})
+
+function setQuizQuestions () {
+  var mainQuestion = document.getElementById ("mainQuestion");
+  mainQuestion.textContent = questionsArray[0].question;
+  // console.log (questionsArray[0].question);
+  optionA.textContent = questionsArray[0].option.a;
+  optionB.textContent = questionsArray[0].option.b;
+  optionC.textContent= questionsArray[0].option.c;
+  optionD.textContent = questionsArray[0].option.d;
+}
+
+optionA.addEventListener("click", function() {
+ 
+});

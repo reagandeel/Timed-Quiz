@@ -1,121 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Web Quiz</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web Quiz</title>
   <link rel="stylesheet" href="./Assets/css/style.css">
-  
+
 </head>
+
 <body>
   <div class="border">
-  <!--Navigation Bar / show highscores and timer-->
-    <div class="navbar">
+    <!--Navigation Bar / show highscores and timer-->
+    <div class="score">
       <button>View Highscores</button>
       <div class="timer">
-        <div class="time-alert">Remaining Time</div>
-        <div class="time-left">0:00 seconds</div>
+        <div class="timeAlert">Remaining Time</div>
+        <!--<div class="time-left">0:00 seconds</div>-->
       </div>
     </div>
-  <!-- Prompt to start quiz -->
-    <div class="innerContainer">
+    <!-- Prompt to start quiz -->
+    <div id="innerContainer">
       <header class="prompt">
-        <p>To begin, press <button class="start-quiz" id="start-button">start!</button></p>
-  
+        <p>To begin, press <button id="startBtn">START!</button></p>
       </header>
-  <!-- Actual Quiz -->
-      <main>
-          <section id="quizQuestions" style="display:none">
-            <h2 id="mainQuestion"></h2>
-            <ul>
-              <div id="answerChoice">
-                <button id="optionA"></button>
-              </div>
-              <div id="answerChoice">
-                <button id="optionB"></button>
-              </div>
-              <div id="answerChoice">
-                <button id="optionC"></button>
-              </div>
-              <div id="answerChoice">
-                <button id="optionD"></button>
-              </div>
-            </ul>
-          </section>
-        </div>
-      <!--Footer of the page-->
-        <footer id="buttons">
-          <button class="quit">EXIT</button>
-          <button class="next">NEXT QUESTION</button>
-          <button class="submit">SUBMIT</button>
-        </footer>
-      </section>
-      </div>
-     
-      </main>
     </div>
+      <!-- Actual Quiz -->
+      <main>
+        <div id="quizQuestions" style="display:none">
+          <h2 id="mainQuestion"></h2>
+          <ul>
+            <div id="answerChoice">
+              <button id="optionA"></button>
+            </div>
+            <div id="answerChoice">
+              <button id="optionB"></button>
+            </div>
+            <div id="answerChoice">
+              <button id="optionC"></button>
+            </div>
+            <div id="answerChoice">
+              <button id="optionD"></button>
+            </div>
+          </ul>
+        </div>
+      </main>
+    <section id="AnswerResponse">
+    </section>
+
+     <!-- <div id="timesUp" style="display: none">
+      <h2>Time is Up!</h2>
+      Your Score was: <var id="end_score"> </var>
+      </br>
+      Initials: <input type="text" value="initials" id="initials">
+      </br>
+      <input type="button" value="submit" id="submit_intials" onclick="submit_score()">
+    </div>
+
+    <div id="high_scores_page" style="display: none">
+      <h2> High Scores </h2>
+      <div id="high_scores"></div>
+      <input type="button" value="Go Back" id="go_back" onclick="go_home()">
+      <input type="button" id="Clear Highscores" value="clear" onclick="clear_hs()">
+    </div> -->
+    <!--Quiz Ended-->
+
   </div>
 
+  <script src="./Assets/js/script.js"></script>
 </body>
 
-<script src="./Assets/js/script.js"></script>
 </html>
-
->/*
-
-
-<!--Coded out for good reason:
-<section id="Question">Question</section>
-        <ul>
-          <li>
-            <input type="radio" name="answer" id="a" class="answer">
-            <label for="a" id="a_text">Answer.</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="b" class="answer">
-            <label for="b" id="b_text">Answer.</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="c" class="answer">
-            <label for="c" id="c_text">Answer.</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="d" class="answer">
-            <label for="d" id="d_text">Answer.</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="e" class="answer">
-            <label for="e" id="e_text">Answer.</label>
-          </li>
-          <li>
-            <input type="radio" name="answer" id="f" class="answer">
-            <label for="f" id="f_text">Answer.</label>
-          </li>
-        </ul>-->
-        
-        <!--
-        <div class="question">
-          <span>What does CSS stand for?</span>
-        </div>
-        <div class="answers">
-          <div class="answer">
-            <span>Cascading Style Sheet</span>
-            <div class="correct"><i class="fas fa check"></i></div>
-          </div>
-        </div>
-        <div class="answer-choice">
-          <div class="answer">
-            <span>Computer Style Sheet</span>
-            <div class="wrong"><i class="fas fa tick"></i></div>
-          </div>
-          <div class="answer">
-            <span>Coloring Style Sheet</span>
-            <div class="wrong"><i class="fas fa tick"></i></div>
-          </div>
-          <div class="answer">
-            <span>Common Style Sheet</span>
-          </div>
-        </section> 
-       -->
